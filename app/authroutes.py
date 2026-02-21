@@ -9,7 +9,42 @@ def init_app(app):
     
     @app.route('/')
     def home():
-        return render_template("template.html")
+        return render_template('templat.html')
+    
+    @app.route()
+    def registerUser():
+        return
+    
+    @app.route()
+    def log_in():
+        return
+    
 
+    @app.route()
+    def refresh():
+        return
+
+    @app.route()
+    def logout():
+        return
+    
+    @app.route()
+    def getCurrentUser():
+        return
+    
+    
+    @app.route()
+    def changePassword():
+        return
+    
+    
+    @app.route()
+    def forgotPassword():
+        return
+    
+    
+    @app.route()
+    def resetpassword():
+        return
 
     
