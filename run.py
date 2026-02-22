@@ -1,9 +1,10 @@
-from app import create_app, db
-from flask_migrate import Migrate
+import os
 
-app = create_app()
-migrate = Migrate(app, db)
+from app import create_app
 
 
-if __name__== '__main__':
-    app.run(debug =True)
+app = create_app(os.getenv("FLASK_ENV", "development"))
+
+
+if __name__ == "__main__":
+    app.run(host=os.getenv("HOST", "0.0.0.0"), port=int(os.getenv("PORT", "5000")))
